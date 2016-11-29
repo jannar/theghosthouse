@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class NewPlayerMovement :MonoBehaviour {
+public class NewPlayerMovement : LivingEntity {
 
 Camera mainCam;
 
@@ -12,7 +12,8 @@ public Vector3 newPos;
 
 
 	// Use this for initialization
-	void Start () {
+	public override void Start () { //overrides base class start method
+	base.Start(); //calls start method of base class, allowing both start methods to run
 
 	mainCam = Camera.main;
 
