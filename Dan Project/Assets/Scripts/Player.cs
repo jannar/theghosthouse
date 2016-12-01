@@ -7,6 +7,7 @@ public class Player : LivingEntity {
 	Vector3 velocity;
 	Rigidbody rb; 
 	Camera mainCam;
+	public float spoopAmount = 0;
 
 
 	// Use this for initialization
