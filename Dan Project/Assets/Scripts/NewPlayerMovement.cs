@@ -7,15 +7,18 @@ Camera mainCam;
 
 public float lerpSpeed;
 public float lerpPercent;
+public float speedLimit;
+public float speed;
 public Vector3 currentPos;
 public Vector3 newPos;
+public Vector3 target;
 
 
 	// Use this for initialization
-	public override void Start () { //overrides base class start method
-	base.Start(); //calls start method of base class, allowing both start methods to run
+	void Start () {
 
 	mainCam = Camera.main;
+
 
 	
 	}
@@ -25,6 +28,7 @@ public Vector3 newPos;
 	{
 		currentPos = transform.position;
 		lerpPercent += Time.deltaTime/lerpSpeed; 
+		target = mainCam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, mainCam.transform.position.y)); 
 		Vector3 mousePos = mainCam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, mainCam.transform.position.y)); 
 		transform.LookAt (mousePos + Vector3.up * transform.position.y);
 		newPos = mousePos + Vector3.up * transform.position.y;
@@ -36,8 +40,8 @@ public Vector3 newPos;
 	{
 		if (Input.GetButton("Move"))
 		{
-			Debug.Log("Moving");
-			transform.position = Vector3.Lerp(currentPos, newPos, lerpPercent);
+		  	Vector3 targetDirection = target - transform.position;
+		  	transform.position += targetDirection * (speed * Time.deltaTime); 
 		}
 	}
 }

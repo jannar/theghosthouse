@@ -10,7 +10,7 @@ public class Enemy : MonoBehaviour {
 	NavMeshAgent pathfinder; //our nav mesh agent
 	Transform target; //our target
 	LivingEntity targetEntity;
-	bool hasTarget;
+	public bool hasTarget;
 	public bool movementActive = false; // we are moving
 	public bool targetInSight= false; //we have a target in line of sight
 	public float viewDistance = 10f; //line of sight distance
@@ -55,6 +55,8 @@ public class Enemy : MonoBehaviour {
 	}
 
 	void Update () {
+
+	Debug.Log(currentState); 
 		if(hasTarget){
 			Vector3 targetDirection = target.position - this.transform.position; //gets direction of target 
 			float targetAngle = Vector3.Angle(targetDirection,this.transform.forward); //gets angle to target
