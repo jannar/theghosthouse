@@ -6,6 +6,7 @@ public class SpoopScript : MonoBehaviour {
 public bool spoopingTheDog; 
 public float spoopDistance = 10f; //line of sight distance
 public float spoopAngle = 360f; //line of sight angle
+DogBeenSpooped ds;
 GameObject corgi; 
 
 
@@ -13,6 +14,8 @@ GameObject corgi;
 	void Start () 
 	{
 	corgi = GameObject.Find("Player"); 
+	ds = corgi.GetComponent<DogBeenSpooped> ();
+	
 	spoopingTheDog = false; 
 	
 	}
@@ -32,8 +35,10 @@ GameObject corgi;
 
 			if(Vector3.Distance(corgi.transform.position, this.transform.position) < spoopDistance && targetAngle < spoopAngle){ //checks if target is in line of sight
 				spoopingTheDog = true;
+				ds.BeingSpooped = true;
 			}else{
 				spoopingTheDog = false;
+				ds.BeingSpooped = false;
 			}
 	}
 }
