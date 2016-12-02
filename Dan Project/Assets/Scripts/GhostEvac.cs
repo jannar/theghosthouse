@@ -26,7 +26,7 @@ public class GhostEvac : MonoBehaviour {
 	void Update () {
 
 		Vector3 ghostDirection = new Vector3 (transform.position.x, transform.position.y, transform.position.z);
-		int originalSpeed = agent.speed;
+		float originalSpeed = agent.speed;
 
 		if (ds.visibleGhosts.Contains (this.transform)) {
 
