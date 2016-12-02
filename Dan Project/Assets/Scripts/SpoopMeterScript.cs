@@ -9,13 +9,6 @@ public float maxSpoopLevel;
 public float currentSpoopLevel; 
 public float spoopIncreaseRate; 
 public float spoopRateModifier;
-public bool happy; 
-public bool wow;
-public bool kindaSpoop;
-public bool verySpoop;
-
-
-	
 
 
 public Image content; 
@@ -35,7 +28,6 @@ public Image content;
 	}
 
 	handleBar (); 
-	howSpooped (); 
 	
 	}
 
@@ -60,42 +52,5 @@ public Image content;
 		}
 	}
 
-	public void howSpooped()
-	{
-		if (content.fillAmount <= 0f) 
-		{
-			happy = true; 
-			wow = true;
-			kindaSpoop = false;
-			verySpoop = false;
 
-		}
-
-		if (content.fillAmount > 0f && content.fillAmount < 0.33f)
-		{
-			happy = false;
-			wow = true;
-			kindaSpoop = false;
-			verySpoop = false;
-
-		}
-
-		if (content.fillAmount > 0.33f && content.fillAmount < 0.66f)
-		{
-			happy = false;
-			wow = false;
-			kindaSpoop = true;
-			verySpoop = false;
-		}
-
-		if (content.fillAmount > 0.66f)
-		{
-			happy = false; 
-			wow = false;
-			kindaSpoop = false;
-			verySpoop = true;
-		}
-
-
-	}
 }
