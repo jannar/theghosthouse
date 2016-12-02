@@ -1,0 +1,493 @@
+fileFormatVersion: 2
+guid: ffcbfd4a449f04ca5b6e07b3b7429e3d
+timeCreated: 1480712935
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Ghosts2Sprites_0
+    21300002: Ghosts2Sprites_1
+    21300004: Ghosts2Sprites_2
+    21300006: Ghosts2Sprites_3
+    21300008: Ghosts2Sprites_4
+    21300010: Ghosts2Sprites_5
+    21300012: Ghosts2Sprites_6
+    21300014: Ghosts2Sprites_7
+    21300016: Ghosts2Sprites_8
+    21300018: Ghosts2Sprites_9
+    21300020: Ghosts2Sprites_10
+    21300022: Ghosts2Sprites_11
+    21300024: Ghosts2Sprites_12
+    21300026: Ghosts2Sprites_13
+    21300028: Ghosts2Sprites_14
+    21300030: Ghosts2Sprites_15
+    21300032: Ghosts2Sprites_16
+    21300034: Ghosts2Sprites_17
+    21300036: Ghosts2Sprites_18
+    21300038: Ghosts2Sprites_19
+    21300040: Ghosts2Sprites_20
+    21300042: Ghosts2Sprites_21
+    21300044: Ghosts2Sprites_22
+    21300046: Ghosts2Sprites_23
+    21300048: Ghosts2Sprites_24
+    21300050: Ghosts2Sprites_25
+    21300052: Ghosts2Sprites_26
+    21300054: Ghosts2Sprites_27
+    21300056: Ghosts2Sprites_28
+    21300058: Ghosts2Sprites_29
+    21300060: Ghosts2Sprites_30
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Ghosts2Sprites_0
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 1453
+        width: 279
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghosts2Sprites_1
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 1449
+        width: 286
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghosts2Sprites_2
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 1456
+        width: 290
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghosts2Sprites_3
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 1460
+        width: 291
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghosts2Sprites_4
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 1454
+        width: 279
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghosts2Sprites_5
+      rect:
+        serializedVersion: 2
+        x: 1839
+        y: 1445
+        width: 288
+        height: 333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghosts2Sprites_6
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 1108
+        width: 197
+        height: 322
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghosts2Sprites_7
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 1106
+        width: 191
+        height: 323
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghosts2Sprites_8
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 1105
+        width: 195
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghosts2Sprites_9
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 1110
+        width: 192
+        height: 322
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghosts2Sprites_10
+      rect:
+        serializedVersion: 2
+        x: 1514
+        y: 1109
+        width: 190
+        height: 326
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghosts2Sprites_11
+      rect:
+        serializedVersion: 2
+        x: 1875
+        y: 1108
+        width: 189
+        height: 321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghosts2Sprites_12
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 749
+        width: 189
+        height: 328
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghosts2Sprites_13
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 1022
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghosts2Sprites_14
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 753
+        width: 186
+        height: 319
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghosts2Sprites_15
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 756
+        width: 184
+        height: 317
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghosts2Sprites_16
+      rect:
+        serializedVersion: 2
+        x: 1153
+        y: 751
+        width: 188
+        height: 321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghosts2Sprites_17
+      rect:
+        serializedVersion: 2
+        x: 1508
+        y: 754
+        width: 199
+        height: 319
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghosts2Sprites_18
+      rect:
+        serializedVersion: 2
+        x: 1868
+        y: 748
+        width: 197
+        height: 323
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghosts2Sprites_19
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 433
+        width: 278
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghosts2Sprites_20
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 436
+        width: 272
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghosts2Sprites_21
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 432
+        width: 265
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghosts2Sprites_22
+      rect:
+        serializedVersion: 2
+        x: 1134
+        y: 432
+        width: 264
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghosts2Sprites_23
+      rect:
+        serializedVersion: 2
+        x: 1482
+        y: 377
+        width: 265
+        height: 326
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghosts2Sprites_24
+      rect:
+        serializedVersion: 2
+        x: 1845
+        y: 369
+        width: 265
+        height: 332
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghosts2Sprites_25
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 14
+        width: 256
+        height: 321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghosts2Sprites_26
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 13
+        width: 256
+        height: 323
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghosts2Sprites_27
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 7
+        width: 311
+        height: 346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghosts2Sprites_28
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 5
+        width: 311
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghosts2Sprites_29
+      rect:
+        serializedVersion: 2
+        x: 1464
+        y: 4
+        width: 308
+        height: 348
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ghosts2Sprites_30
+      rect:
+        serializedVersion: 2
+        x: 1813
+        y: 1
+        width: 317
+        height: 357
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
