@@ -28,9 +28,7 @@ public class FieldOfView : MonoBehaviour {
 	}
 
 	void Update(){
-		if(viewAngle > 20f){
-			viewAngle -= 0.01f;
-		}
+		
 	}
 
 	IEnumerator FindTargetsWithDelay(float delay){ //coroutine that will regularly call our target finding method

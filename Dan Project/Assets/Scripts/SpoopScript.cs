@@ -35,10 +35,11 @@ GameObject corgi;
 
 			if(Vector3.Distance(corgi.transform.position, this.transform.position) < spoopDistance && targetAngle < spoopAngle){ //checks if target is in line of sight
 				spoopingTheDog = true;
-				ds.BeingSpooped = true;
-			}else{
+
+			}
+			else
+			{
 				spoopingTheDog = false;
-				ds.BeingSpooped = false;
 			}
 	}
 }

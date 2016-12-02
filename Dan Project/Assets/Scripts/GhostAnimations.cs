@@ -68,7 +68,7 @@ GameObject corgi;
 
 	void animationHandler ()
 	{
-		GetComponent<Animator>().SetBool("idle", idle);
+		GetComponent<Animator>().SetBool("Idle", idle);
 		GetComponent<Animator>().SetBool("Chasing", chasing);
 		GetComponent<Animator>().SetBool("Stunned", stunned);
 		GetComponent<Animator>().SetBool("Fleeing", fleeing);
