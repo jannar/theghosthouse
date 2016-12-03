@@ -2,15 +2,16 @@
 using System.Collections;
 using System.Collections.Generic;
 
+//!!!!!this is on the ghost character!!!!!
+
 public class GhostEvac : MonoBehaviour {
 
 	//objects and scripts
 	GameObject corgi;
-	GameObject capsule;
-	Collider beam;
 
 	//public stuff
 	public bool inLineSight = false;
+	public bool borked = false;
 	public TextMesh spoopStatements;
 
 	public List<string> SpoopedWords;
@@ -24,9 +25,6 @@ public class GhostEvac : MonoBehaviour {
 
 		//gettin' the scrips
 		corgi = GameObject.Find ("Player");
-		beam = corgi.GetComponentInChildren<CapsuleCollider>();
-
-		//fv = corgi.GetComponent<FieldOfView> ();
 
 		//navmesh
 		agent = this.GetComponent<NavMeshAgent>();
@@ -45,11 +43,16 @@ public class GhostEvac : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+		if (borked == true) {
+			this.gameObject.SetActive (false);
+			//gameobject move transform
+			//gameobject set active true
+		}
+
 	}
 
 	void OnTriggerEnter(Collider col){
 
-		Vector3 ghostDirection = new Vector3 (transform.position.x, transform.position.y, transform.position.z);
 		float originalSpeed = agent.speed;
 
 		if (col.CompareTag("Beam") == true) {
