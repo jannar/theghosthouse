@@ -28,11 +28,16 @@ public class EliminateGhosts : MonoBehaviour {
 
 	void OnTriggerEnter(Collider col){
 
-		if (col.CompareTag("Ghost") == true ) {
+		if (col.CompareTag ("Ghost") == true) {
 
 			SeesGhost = true;
 			ge.inLineSight = false;
-			Debug.Log ("true");
+
+		} else {
+
+			SeesGhost = false;
+			ge.inLineSight = false;
+
 		}
 
 
