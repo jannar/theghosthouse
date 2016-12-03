@@ -4,7 +4,7 @@ using System.Collections;
 [RequireComponent (typeof (NavMeshAgent))]
 public class Enemy : MonoBehaviour {
 
-	public enum State {Idle, Chasing, Attacking};
+	public enum State {Idle, Chasing};
 	State currentState;
 
 	NavMeshAgent pathfinder; //our nav mesh agent
@@ -16,10 +16,6 @@ public class Enemy : MonoBehaviour {
 	public float viewDistance = 10f; //line of sight distance
 	public float viewAngle = 30f; //line of sight angle
 	public float counter = 5; //counter for how long this enemy will keep moving after losing sight of the target
-	public float attackDistance = 3f;
-	public float attackTimer = 1;
-	public float damage = 1;
-	float nextAttack; 
 	float colliderRadius;
 	float targetColliderRadius;
 	public AudioClip wakeAudio; //sound to play when target is sighted
@@ -67,13 +63,6 @@ public class Enemy : MonoBehaviour {
 				targetInSight = false;
 			}
 
-			if(Time.time > nextAttack){
-				float squareDistanceToTarget = (target.position - transform.position).sqrMagnitude; //distance squared between us and target
-					if (squareDistanceToTarget < Mathf.Pow(attackDistance,2)){
-						nextAttack = Time.time + attackTimer;
-					StartCoroutine(Attack());
-					}
-				}
 
 		 	if(targetInSight == true && movementActive == false){ //if the target is in sight but we're not moving
 				movementActive = true; //set moving to true
@@ -112,32 +101,4 @@ public class Enemy : MonoBehaviour {
 			yield return new WaitForSeconds(refreshRate); //waits the refresh rate before calling again
 		}
 	}
-
-	IEnumerator Attack(){ //coroutine for attacking player
-		currentState = State.Attacking;
-		pathfinder.enabled = false;
-		Vector3 startingPosition = transform.position; //position at start of attack
-		Vector3 attackPosition = target.position; //position at moment of hit
-
-		float percent = 0; //percentage of the way through the attack
-		float attackSpeed = 3; //speed of the attack
-		bool hasDamaged = false;
-		while (percent <= 1) { //while attack is less than 100% complete
-			if (percent >= .5f && !hasDamaged){
-				hasDamaged = true;
-				targetEntity.TakeDamage(damage);
-			}
-
-			percent += Time.deltaTime * attackSpeed; //increase attack percentage of completion by time multiplied by speed of attack
-			float interpolation = (-Mathf.Pow(percent,2) + percent) * 4; //parabola from 0 to 1 to 0
-			transform.position = Vector3.Lerp(startingPosition, attackPosition, interpolation); //lerps position from starting to attack back to starting,  using our parabola
-
-			yield return null;
-		}
-		currentState = State.Chasing;
-		pathfinder.enabled = true;
-	}
 }
-
-
-
