@@ -1,0 +1,409 @@
+fileFormatVersion: 2
+guid: 2cfb398a8e12d4992af2fdc9619e94cb
+timeCreated: 1480723619
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: BlueGhost_0
+    21300002: BlueGhost_1
+    21300004: BlueGhost_2
+    21300006: BlueGhost_3
+    21300008: BlueGhost_4
+    21300010: BlueGhost_5
+    21300012: BlueGhost_6
+    21300014: BlueGhost_7
+    21300016: BlueGhost_8
+    21300018: BlueGhost_9
+    21300020: BlueGhost_10
+    21300022: BlueGhost_11
+    21300024: BlueGhost_12
+    21300026: BlueGhost_13
+    21300028: BlueGhost_14
+    21300030: BlueGhost_15
+    21300032: BlueGhost_16
+    21300034: BlueGhost_17
+    21300036: BlueGhost_18
+    21300038: BlueGhost_19
+    21300040: BlueGhost_20
+    21300042: BlueGhost_21
+    21300044: BlueGhost_22
+    21300046: BlueGhost_23
+    21300048: BlueGhost_24
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BlueGhost_0
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 1440
+        width: 261
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BlueGhost_1
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 1440
+        width: 278
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BlueGhost_2
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 1440
+        width: 310
+        height: 328
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BlueGhost_3
+      rect:
+        serializedVersion: 2
+        x: 1082
+        y: 1440
+        width: 326
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BlueGhost_4
+      rect:
+        serializedVersion: 2
+        x: 1484
+        y: 1445
+        width: 221
+        height: 278
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BlueGhost_5
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 1093
+        width: 196
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BlueGhost_6
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 1093
+        width: 162
+        height: 333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BlueGhost_7
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 1090
+        width: 163
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BlueGhost_8
+      rect:
+        serializedVersion: 2
+        x: 1178
+        y: 1089
+        width: 156
+        height: 349
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BlueGhost_9
+      rect:
+        serializedVersion: 2
+        x: 1521
+        y: 1093
+        width: 187
+        height: 307
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BlueGhost_10
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 725
+        width: 217
+        height: 272
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BlueGhost_11
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 728
+        width: 196
+        height: 305
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BlueGhost_12
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 727
+        width: 194
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BlueGhost_13
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 730
+        width: 199
+        height: 301
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BlueGhost_14
+      rect:
+        serializedVersion: 2
+        x: 1513
+        y: 727
+        width: 196
+        height: 298
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BlueGhost_15
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 407
+        width: 344
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BlueGhost_16
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 405
+        width: 324
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BlueGhost_17
+      rect:
+        serializedVersion: 2
+        x: 759
+        y: 386
+        width: 310
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BlueGhost_18
+      rect:
+        serializedVersion: 2
+        x: 1119
+        y: 389
+        width: 308
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BlueGhost_19
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 372
+        width: 341
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BlueGhost_20
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 10
+        width: 336
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BlueGhost_21
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 11
+        width: 311
+        height: 345
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BlueGhost_22
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 11
+        width: 297
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BlueGhost_23
+      rect:
+        serializedVersion: 2
+        x: 1061
+        y: 100
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BlueGhost_24
+      rect:
+        serializedVersion: 2
+        x: 1061
+        y: 47
+        width: 8
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
