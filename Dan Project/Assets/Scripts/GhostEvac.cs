@@ -28,9 +28,7 @@ public class GhostEvac : MonoBehaviour {
 
 		//gettin' the scrips
 		corgi = GameObject.Find ("Player");
-		capsule = GameObject.Find ("Capsule");
-
-		beam = capsule.GetComponent<CapsuleCollider> ();
+		beam = corgi.GetComponentInChildren<CapsuleCollider>();
 
 		//fv = corgi.GetComponent<FieldOfView> ();
 
@@ -102,10 +100,12 @@ public class GhostEvac : MonoBehaviour {
 //		Vector3 ghostDirection = new Vector3 (transform.position.x, transform.position.y, transform.position.z);
 //		float originalSpeed = agent.speed;
 
-		if (col = beam) {
+		if (col.CompareTag("Beam") == true) {
 			inLineSight = true;
 		} else {
 			inLineSight = false;
 		}
+
+		Debug.Log (col.tag + "COL");
 	}
 }
