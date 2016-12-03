@@ -16,8 +16,13 @@ public class FieldOfView : MonoBehaviour {
 	public float edgeDistanceThreshold; //used to aid in properly resolving edge cases involving multiple obstacles
 	public float maskCutawayDistance = .1f;
 
+	public Vector3 pointA;
+	public Vector3 pointB;
+
 	public MeshFilter viewMeshFilter; //where we will assign our mesh filter in the inspector
 	Mesh viewMesh; //the mesh variable
+
+	public Collider collider;
 
 	// Use this for initialization
 	void Start(){
@@ -186,6 +191,7 @@ public class FieldOfView : MonoBehaviour {
 		public EdgeInfo(Vector3 _pointA, Vector3 _pointB){ //constructor for edgeinfo
 			pointA = _pointA;
 			pointB = _pointB;
+
 		}
 	}
 }
