@@ -13,7 +13,7 @@ GameObject corgi;
 	// Use this for initialization
 	void Start () 
 	{
-	corgi = GameObject.Find("Player"); 
+	corgi = GameObject.Find("Player 1"); 
 	ds = corgi.GetComponent<DogBeenSpooped> ();
 	
 	spoopingTheDog = false; 
