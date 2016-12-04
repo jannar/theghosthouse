@@ -7,9 +7,11 @@ public bool chasing;
 public bool stunned;
 public bool idle;
 public bool fleeing;
+public bool spooping; 
 Enemy enemy;
 SpriteRenderer sr;
 GameObject corgi;
+SpoopScript ss;
 
 
 
@@ -25,6 +27,7 @@ GameObject corgi;
 
 	enemy = GetComponentInParent<Enemy>();
 	sr = GetComponent<SpriteRenderer>(); 
+	ss = GetComponentInParent<SpoopScript>();
 	corgi = GameObject.Find("Player 1");
 
 	
@@ -52,6 +55,16 @@ GameObject corgi;
 			idle = false;
 			chasing = true;
 		}
+
+		if (ss.spoopingTheDog == true)
+		{
+			spooping = true;
+		}
+
+		if (ss.spoopingTheDog == false)
+		{
+			spooping = false; 
+		}
 	}
 
 	void lookAtMe()
@@ -72,5 +85,6 @@ GameObject corgi;
 		GetComponent<Animator>().SetBool("Chasing", chasing);
 		GetComponent<Animator>().SetBool("Stunned", stunned);
 		GetComponent<Animator>().SetBool("Fleeing", fleeing);
+		GetComponent<Animator>().SetBool("Spooping", spooping); 
 	}
 }
