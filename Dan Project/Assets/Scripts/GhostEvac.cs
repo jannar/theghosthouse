@@ -8,6 +8,7 @@ public class GhostEvac : MonoBehaviour {
 
 	//objects and scripts
 	GameObject corgi;
+	GhostStabalizer gs; 
 
 	//public stuff
 	public bool inLineSight = false;
@@ -37,26 +38,26 @@ public class GhostEvac : MonoBehaviour {
 		corgi = GameObject.Find ("Player 1");
 
 		//navmesh
-		agent = this.GetComponent<NavMeshAgent>();
+		agent = GetComponent<NavMeshAgent>();
+		gs = GetComponent<GhostStabalizer>();
 
 		//get the original speed
-		originalSpeed = this.agent.speed;
+		originalSpeed = Random.Range(gs.minSpeed, gs.maxSpeed);
 
-		//settin' up the things they say
-		int i = 0;
-		foreach (string s in SpoopedWords) {
-			SpoopedWords [i] = s.Replace ("BREAK", "\r\n");
-			i++;
-		}
-		currentSpoopWord = 0;
-		spoopStatements.text = SpoopedWords [currentSpoopWord];
+//		//settin' up the things they say
+//		int i = 0;
+//		foreach (string s in SpoopedWords) {
+//			SpoopedWords [i] = s.Replace ("BREAK", "\r\n");
+//			i++;
+//		}
+//		currentSpoopWord = 0;
+//		spoopStatements.text = SpoopedWords [currentSpoopWord];
 	
 	}
 
 	// Update is called once per frame
 	void Update () {
 
-		currentSpeed = agent.speed;
 		randoNumberX = Random.Range (minX, maxX);
 		randoNumberz = Random.Range (minZ, maxZ);
 
@@ -75,15 +76,23 @@ public class GhostEvac : MonoBehaviour {
 
 	void OnTriggerEnter(Collider col){
 
-		float originalSpeed = agent.speed;
+		//float originalSpeed = agent.speed;
 
-		if (col.CompareTag("Beam") == true) {
+		if (col.CompareTag("Beam") == true) 
+		{
 			inLineSight = true;
 			agent.speed = 0;
 
-		} else {
+		} 
+		else {
 			inLineSight = false;
-			//agent.speed = originalSpeed;
+			agent.speed = originalSpeed; 
+		}
+
+		if (col.CompareTag("Nega Beam") == true)
+		{
+			inLineSight = false; 
+			agent.speed = originalSpeed;
 		}
 
 	}

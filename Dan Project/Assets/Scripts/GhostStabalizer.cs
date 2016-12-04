@@ -6,7 +6,7 @@ public class GhostStabalizer : MonoBehaviour {
 public Quaternion stablePos;
 public float minSpeed;
 public float maxSpeed;
-private float speedNumber;
+public float speedNumber;
 NavMeshAgent nma;
 
 	// Use this for initialization
