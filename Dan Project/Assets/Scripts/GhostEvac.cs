@@ -22,6 +22,8 @@ public class GhostEvac : MonoBehaviour {
 	public float minZ;
 	public float maxX;
 	public float maxZ;
+	public int stunTimer;
+	public int maxStunTime;
 
 	public List<string> SpoopedWords;
 
@@ -58,6 +60,8 @@ public class GhostEvac : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+//		stunReset();
+
 		randoNumberX = Random.Range (minX, maxX);
 		randoNumberz = Random.Range (minZ, maxZ);
 
@@ -69,7 +73,6 @@ public class GhostEvac : MonoBehaviour {
 			Vector3 newLocation = new Vector3 (randoNumberX, this.transform.position.y, randoNumberz);
 			this.transform.position = newLocation;
 			borked = false;
-			inLineSight = false;
 		}
 
 	}
@@ -96,4 +99,26 @@ public class GhostEvac : MonoBehaviour {
 		}
 
 	}
+
+	void OnTriggerExit(Collider col)
+	{
+		if (col.CompareTag("Beam") == true)
+		{ 
+			inLineSight = false;
+			agent.speed = originalSpeed;
+		}
+	}
+
+
+//	void stunReset()
+//	{
+//		stunTimer++;
+//		if (stunTimer > maxStunTime)
+//		{
+//			inLineSight = false;
+//			agent.speed = originalSpeed; 
+//			stunTimer = 0; 
+//		}
+//	}
+
 }

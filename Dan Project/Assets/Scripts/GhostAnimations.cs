@@ -12,6 +12,8 @@ Enemy enemy;
 SpriteRenderer sr;
 GameObject corgi;
 SpoopScript ss;
+GhostEvac ge;
+//NavMeshAgent nma;
 
 
 
@@ -24,10 +26,13 @@ SpoopScript ss;
 	chasing = false;
 	stunned = false; 
 	idle = false;
+	spooping = false;
 
 	enemy = GetComponentInParent<Enemy>();
 	sr = GetComponent<SpriteRenderer>(); 
 	ss = GetComponentInParent<SpoopScript>();
+	ge = GetComponentInParent<GhostEvac>();
+	//nma.GetComponentInParent<NavMeshAgent>();
 	corgi = GameObject.Find("Player 1");
 
 	
@@ -65,9 +70,21 @@ SpoopScript ss;
 		{
 			spooping = false; 
 		}
+
+		if (ge.inLineSight ==true)
+		{
+			stunned = true;
+			//nma.speed = 0;
+		}
+
+		if (ge.inLineSight == false)
+		{
+			stunned = false;
+			//nma.speed = ge.originalSpeed;
+		}
 	}
 
-	void lookAtMe()
+	void lookAtMe() 
 	{
 		if (transform.parent.position.x >= corgi.transform.position.x)
 		{
