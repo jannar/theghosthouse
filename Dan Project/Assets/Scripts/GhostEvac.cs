@@ -68,6 +68,7 @@ public class GhostEvac : MonoBehaviour {
 			Vector3 newLocation = new Vector3 (randoNumberX, this.transform.position.y, randoNumberz);
 			this.transform.position = newLocation;
 			borked = false;
+			inLineSight = false;
 		}
 
 	}

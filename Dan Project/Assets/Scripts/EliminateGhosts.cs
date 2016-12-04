@@ -33,10 +33,10 @@ public class EliminateGhosts : MonoBehaviour {
 		//if you see a ghost you can push the button and make the bork true
 		if (SeesGhost == true) {
 			if (Input.GetButtonDown ("Fire1")) {
-				borked = true;
+				this.borked = true;
 				ge.borked = true;
 			}
-		} else {
+		} else if (SeesGhost == false){
 			borked = false;
 			ge.borked = false;
 		}
@@ -54,7 +54,7 @@ public class EliminateGhosts : MonoBehaviour {
 
 		} else {
 
-			SeesGhost = false;
+			this.SeesGhost = false;
 			ge.inLineSight = false;
 		}
 			
