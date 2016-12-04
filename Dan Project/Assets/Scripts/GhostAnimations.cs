@@ -25,7 +25,7 @@ GameObject corgi;
 
 	enemy = GetComponentInParent<Enemy>();
 	sr = GetComponent<SpriteRenderer>(); 
-	corgi = GameObject.Find("Player");
+	corgi = GameObject.Find("Player 1");
 
 	
 	}
