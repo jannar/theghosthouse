@@ -12,13 +12,23 @@ public class GhostEvac : MonoBehaviour {
 	//public stuff
 	public bool inLineSight = false;
 	public bool borked = false;
+
 	public TextMesh spoopStatements;
+
+	public float originalSpeed;
+	public float currentSpeed;
+	public float minX;
+	public float minZ;
+	public float maxX;
+	public float maxZ;
 
 	public List<string> SpoopedWords;
 
 	//private stuff
 	private NavMeshAgent agent;
 	private int currentSpoopWord;
+	private float randoNumberX;
+	private float randoNumberz;
 
 	// Use this for initialization
 	void Start () {
@@ -28,6 +38,9 @@ public class GhostEvac : MonoBehaviour {
 
 		//navmesh
 		agent = this.GetComponent<NavMeshAgent>();
+
+		//get the original speed
+		originalSpeed = this.agent.speed;
 
 		//settin' up the things they say
 		int i = 0;
@@ -43,10 +56,18 @@ public class GhostEvac : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+		currentSpeed = agent.speed;
+		randoNumberX = Random.Range (minX, maxX);
+		randoNumberz = Random.Range (minZ, maxZ);
+
+		if (inLineSight == false) {
+			agent.speed = originalSpeed;
+		}
+
 		if (borked == true) {
-			this.gameObject.SetActive (false);
-			//gameobject move transform
-			//gameobject set active true
+			Vector3 newLocation = new Vector3 (randoNumberX, this.transform.position.y, randoNumberz);
+			this.transform.position = newLocation;
+			borked = false;
 		}
 
 	}
@@ -57,11 +78,11 @@ public class GhostEvac : MonoBehaviour {
 
 		if (col.CompareTag("Beam") == true) {
 			inLineSight = true;
-			this.transform.position -= this.transform.forward * this.agent.speed;
+			agent.speed = 0;
 
 		} else {
 			inLineSight = false;
-			agent.speed = originalSpeed;
+			//agent.speed = originalSpeed;
 		}
 
 	}
