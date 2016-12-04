@@ -34,7 +34,7 @@ public class GhostEvac : MonoBehaviour {
 	void Start () {
 
 		//gettin' the scrips
-		corgi = GameObject.Find ("Player");
+		corgi = GameObject.Find ("Player 1");
 
 		//navmesh
 		agent = this.GetComponent<NavMeshAgent>();
