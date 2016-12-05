@@ -8,10 +8,12 @@ public class EliminateGhosts : MonoBehaviour {
 	//bools
 	public bool SeesGhost = false;
 	public bool borked = false;
+	//LOAD BORK SOUNDS!!!
 
 	//scripts and objects
 	GameObject[] ghosts;
 	GhostEvac ge;
+	//SOMETHING AUDIO MANAGER TOO PROBABLY
 
 	// Use this for initialization
 	void Start () {
@@ -31,16 +33,14 @@ public class EliminateGhosts : MonoBehaviour {
 	void Update () {
 
 		//if you see a ghost you can push the button and make the bork true
-		if (SeesGhost == true) {
-			if (Input.GetButtonDown ("Fire1")) {
-				this.borked = true;
-				ge.borked = true;
-			}
-		} else if (SeesGhost == false){
-			borked = false;
-			ge.borked = false;
-		}
-	
+//		if (SeesGhost == true) {
+//			if (Input.GetButtonDown ("Fire1")) {
+//				//!!!PLAY BORK SOUND!!!
+//				this.borked = true;
+//				ge.borked = true;
+//			}
+//		}
+//	
 	}
 
 	void OnTriggerEnter(Collider col){

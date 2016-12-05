@@ -9,6 +9,8 @@ public class GhostEvac : MonoBehaviour {
 	//objects and scripts
 	GameObject corgi;
 	GhostStabalizer gs; 
+	EliminateGhosts eg;
+	Enemy en;
 
 	//public stuff
 	public bool inLineSight = false;
@@ -17,13 +19,10 @@ public class GhostEvac : MonoBehaviour {
 	public TextMesh spoopStatements;
 
 	public float originalSpeed;
-	public float currentSpeed;
 	public float minX;
 	public float minZ;
 	public float maxX;
 	public float maxZ;
-	public int stunTimer;
-	public int maxStunTime;
 
 	public List<string> SpoopedWords;
 
@@ -42,6 +41,7 @@ public class GhostEvac : MonoBehaviour {
 		//navmesh
 		agent = GetComponent<NavMeshAgent>();
 		gs = GetComponent<GhostStabalizer>();
+		eg = corgi.GetComponentInChildren<EliminateGhosts> ();
 
 		//get the original speed
 		originalSpeed = Random.Range(gs.minSpeed, gs.maxSpeed);
@@ -60,26 +60,41 @@ public class GhostEvac : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-//		stunReset();
-
 		randoNumberX = Random.Range (minX, maxX);
 		randoNumberz = Random.Range (minZ, maxZ);
 
-		if (inLineSight == false) {
+		if (inLineSight == false || borked == false) {
 			agent.speed = originalSpeed;
 		}
 
-		if (borked == true) {
-			Vector3 newLocation = new Vector3 (randoNumberX, this.transform.position.y, randoNumberz);
-			this.transform.position = newLocation;
-			borked = false;
+		if (this.inLineSight == true) {
+			this.agent.speed = 0;
+		}
+
+		if (this.inLineSight == true && this.agent.speed == 0){
+			if (Input.GetButtonDown ("Fire1")) {
+				//!!!PLAY BORK SOUND!!!
+				eg.borked = true;
+			} else {
+				eg.borked = false;
+			}
+
+		}
+
+		if (eg.borked == true && this.agent.speed == 0 && this.inLineSight == true) {
+			this.borked = true;
 		}
 
 	}
 
-	void OnTriggerEnter(Collider col){
+	void FixedUpdate(){
+		if (this.borked == true && eg.borked == true && this.agent.speed == 0 && this.inLineSight == true) {
+			moveTheBorkedGhostie (this.transform);
+			this.borked = false;
+		}
+	}
 
-		//float originalSpeed = agent.speed;
+	void OnTriggerEnter(Collider col){
 
 		if (col.CompareTag("Beam") == true) 
 		{
@@ -90,35 +105,30 @@ public class GhostEvac : MonoBehaviour {
 		else {
 			inLineSight = false;
 			agent.speed = originalSpeed; 
+			this.borked = false;
+			eg.borked = false;
 		}
 
 		if (col.CompareTag("Nega Beam") == true)
 		{
 			inLineSight = false; 
 			agent.speed = originalSpeed;
+			this.borked = false;
+			eg.borked = false;
 		}
-
 	}
 
-	void OnTriggerExit(Collider col)
-	{
-		if (col.CompareTag("Beam") == true)
-		{ 
+	void OnTriggerExit(Collider col){
+		if (col.CompareTag ("Beam")) {
 			inLineSight = false;
-			agent.speed = originalSpeed;
+			this.borked = false;
+			eg.borked = false;
 		}
 	}
 
-
-//	void stunReset()
-//	{
-//		stunTimer++;
-//		if (stunTimer > maxStunTime)
-//		{
-//			inLineSight = false;
-//			agent.speed = originalSpeed; 
-//			stunTimer = 0; 
-//		}
-//	}
-
+	void moveTheBorkedGhostie(Transform ghost){
+		Vector3 newLocation = new Vector3 (randoNumberX, this.transform.position.y, randoNumberz);
+		this.transform.position = newLocation;
+		this.borked = false;
+	}
 }
