@@ -16,11 +16,15 @@ public float viewAngle;
 public LayerMask obstacleMask; //layer mask for obstacles
 public LayerMask targetMask; 
 public bool spooped;
+GameObject frandCounter;
+FrandCounter fc;
 
 
 
 	// Use this for initialization
 	void Start () {
+		frandCounter = GameObject.Find("FrandCounter");
+		fc = frandCounter.GetComponent<FrandCounter>();
 		spoopMeter = GameObject.Find("Spoop Meter");
 		sm = spoopMeter.GetComponent<SpoopMeterScript>();
 		spooped = false;
@@ -66,13 +70,14 @@ public bool spooped;
 		if (numberOfGhostsInRange >=1)
 		{
 			spooped = true;
-			sm.increaseMeter(numberOfGhostsInRange);  
+			sm.increaseMeter(numberOfGhostsInRange - fc.numOfFrands);  
 		}
 
-		if (numberOfGhostsInRange <= 0)
+		if ((numberOfGhostsInRange - fc.numOfFrands) <= 0) 
 		{
 			spooped = false;
 			sm.currentSpoopLevel--;
 		}
+
 	}
 }

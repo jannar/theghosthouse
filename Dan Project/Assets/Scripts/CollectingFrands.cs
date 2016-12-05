@@ -5,14 +5,19 @@ public class CollectingFrands : MonoBehaviour {
 
 public bool found;
 GameObject corgi;
+GameObject frandCounter;
 NavMeshAgent pathfinder;
+FrandCounter fc;
 float colliderRadius; 
 float corgiColliderRadius;
 
 	// Use this for initialization
 	void Start () {
 
+
 	corgi = GameObject.Find("Player 1");
+	frandCounter = GameObject.Find("FrandCounter");
+	fc = frandCounter.GetComponent<FrandCounter>();
 	pathfinder = GetComponent<NavMeshAgent>(); 
 	corgiColliderRadius = corgi.GetComponent<CapsuleCollider>().radius; 
 	colliderRadius = GetComponent<CapsuleCollider>().radius; 
@@ -30,9 +35,10 @@ float corgiColliderRadius;
 
 	void OnTriggerEnter(Collider col)
 	{
-		if (col.CompareTag("FrandFinder2") == true) 
+		if (col.CompareTag("FrandFinder2") == true && found == false) 
 		{
 			found = true;
+			fc.increaseFrands();
 		} 
 	}
 
