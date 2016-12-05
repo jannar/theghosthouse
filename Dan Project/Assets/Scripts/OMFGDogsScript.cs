@@ -21,6 +21,7 @@ public class OMFGDogsScript : MonoBehaviour {
 	void Update () {
 
 //		if (allFrandsFound == true) {
+			//stop playing main theme
 //			source.PlayOneShot (omfgdogs);
 //		}
 	}
