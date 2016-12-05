@@ -2,45 +2,44 @@
 using System.Collections;
 
 public class CorgiAnimations : MonoBehaviour {
-
+public bool idle;
 public bool moving;
-public bool barking;
 public bool spooped;
-
+public bool barking;
 
 	// Use this for initialization
 	void Start () {
-
-	moving = false; 
-	barking = false;
-	spooped = false; 
 	
 	}
-
+	
 	// Update is called once per frame
 	void Update () {
 
-	stateDetector(); 
+	stateDetector();
 	animationHandler();
-	
 	}
 
-	void stateDetector () 
+	void stateDetector()
 	{
-		if (Input.GetButton("Move"))
+		if (Input.GetButton("Move") ==true)
 		{
+			idle = false;
 			moving = true;
 		}
-		else 
+
+		if (!Input.GetButton("Move") ==true)
 		{
+			idle = true;
 			moving = false;
 		}
+
 	}
 
 	void animationHandler ()
 	{
+		GetComponent<Animator>().SetBool("Idle", idle);
 		GetComponent<Animator>().SetBool("Moving", moving);
+		GetComponent<Animator>().SetBool("Spooped", spooped); 
 		GetComponent<Animator>().SetBool("Barking", barking);
-		GetComponent<Animator>().SetBool("Spooped", spooped);
 	}
 }
