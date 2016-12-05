@@ -22,25 +22,11 @@ public class EliminateGhosts : MonoBehaviour {
 		ghosts = GameObject.FindGameObjectsWithTag ("Ghost");
 
 		foreach (GameObject go in ghosts){
-			
+
 			ge = go.GetComponent<GhostEvac>();
 
 		}
-	
-	}
 
-	// Update is called once per frame
-	void Update () {
-
-		//if you see a ghost you can push the button and make the bork true
-//		if (SeesGhost == true) {
-//			if (Input.GetButtonDown ("Fire1")) {
-//				//!!!PLAY BORK SOUND!!!
-//				this.borked = true;
-//				ge.borked = true;
-//			}
-//		}
-//	
 	}
 
 	void OnTriggerEnter(Collider col){
@@ -57,6 +43,6 @@ public class EliminateGhosts : MonoBehaviour {
 			this.SeesGhost = false;
 			ge.inLineSight = false;
 		}
-			
+
 	}
 }
