@@ -8,12 +8,12 @@ public class EliminateGhosts : MonoBehaviour {
 	//bools
 	public bool SeesGhost = false;
 	public bool borked = false;
-	//LOAD BORK SOUNDS!!!
 
 	//scripts and objects
 	GameObject[] ghosts;
 	GhostEvac ge;
-	//SOMETHING AUDIO MANAGER TOO PROBABLY
+	AudioSource source;
+	public AudioClip bark;
 
 	// Use this for initialization
 	void Start () {
@@ -25,6 +25,17 @@ public class EliminateGhosts : MonoBehaviour {
 
 			ge = go.GetComponent<GhostEvac>();
 
+		}
+
+		//get the sound
+		source = GetComponentInParent<AudioSource>();
+
+	}
+
+	void Update(){
+
+		if (borked == true) {
+			source.PlayOneShot (bark);
 		}
 
 	}
@@ -43,6 +54,5 @@ public class EliminateGhosts : MonoBehaviour {
 			this.SeesGhost = false;
 			ge.inLineSight = false;
 		}
-
 	}
 }
