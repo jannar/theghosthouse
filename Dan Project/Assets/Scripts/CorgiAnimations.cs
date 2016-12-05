@@ -24,12 +24,19 @@ public bool barking;
 		if (Input.GetButton("Move") ==true)
 		{
 			idle = false;
+			spooped = false;
 			moving = true;
 		}
 
-		if (!Input.GetButton("Move") ==true)
+		if (!Input.GetButton("Move") ==true && spooped == false)
 		{
 			idle = true;
+			moving = false;
+		}
+
+		if (!Input.GetButton("Move") ==true && spooped == true)
+		{
+			idle = false;
 			moving = false;
 		}
 
