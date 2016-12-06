@@ -4,10 +4,12 @@ using System.Collections;
 public class CollectingFrands : MonoBehaviour {
 
 public bool found;
+public int dogNum;
 GameObject corgi;
 GameObject frandCounter;
 NavMeshAgent pathfinder;
 FrandCounter fc;
+PortraitSwitchboard psb;
 float colliderRadius; 
 float corgiColliderRadius;
 
@@ -18,6 +20,7 @@ float corgiColliderRadius;
 	corgi = GameObject.Find("Player 1");
 	frandCounter = GameObject.Find("FrandCounter");
 	fc = frandCounter.GetComponent<FrandCounter>();
+	psb = frandCounter.GetComponent<PortraitSwitchboard>();
 	pathfinder = GetComponent<NavMeshAgent>(); 
 	corgiColliderRadius = corgi.GetComponent<CapsuleCollider>().radius; 
 	colliderRadius = GetComponent<CapsuleCollider>().radius; 
@@ -39,6 +42,7 @@ float corgiColliderRadius;
 		{
 			found = true;
 			fc.increaseFrands();
+			psb.switchBoard(dogNum);
 		} 
 	}
 
