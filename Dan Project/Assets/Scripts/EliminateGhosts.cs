@@ -34,7 +34,7 @@ public class EliminateGhosts : MonoBehaviour {
 
 	void Update(){
 
-		if (borked == true) {
+		if (Input.GetButtonDown ("Fire1")) {
 			source.PlayOneShot (bark);
 		}
 
