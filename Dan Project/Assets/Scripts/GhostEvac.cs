@@ -25,11 +25,6 @@ public class GhostEvac : MonoBehaviour {
 	public float maxX = 120f;
 	public float maxZ = 120f;
 
-	public List<string> SpoopedWords;
-
-//	float colliderRadius;
-//	float corgiColliderRadius;
-
 	//private stuff
 	private NavMeshAgent agent;
 	private int currentSpoopWord;
@@ -43,7 +38,6 @@ public class GhostEvac : MonoBehaviour {
 
 		//gettin' the scrips
 		corgi = GameObject.Find ("Player 1");
-		//FrandFinder = GameObject.Find ("FrandFinder");
 
 		//navmesh and other scripts
 		agent = GetComponent<NavMeshAgent>();
@@ -55,15 +49,6 @@ public class GhostEvac : MonoBehaviour {
 
 		corgiColliderRadius = corgi.GetComponent<CapsuleCollider>().radius; 
 		colliderRadius = GetComponent<CapsuleCollider>().radius; 
-
-//		//settin' up the things they say
-//		int i = 0;
-//		foreach (string s in SpoopedWords) {
-//			SpoopedWords [i] = s.Replace ("BREAK", "\r\n");
-//			i++;
-//		}
-//		currentSpoopWord = 0;
-//		spoopStatements.text = SpoopedWords [currentSpoopWord];
 	
 	}
 
@@ -88,7 +73,6 @@ public class GhostEvac : MonoBehaviour {
 		//the corgi borked to true
 		if (this.inLineSight == true && this.agent.speed == 0){
 			if (Input.GetButtonDown ("Fire1")) {
-				//!!!PLAY BORK SOUND!!!
 				eg.borked = true;
 			} else {
 				eg.borked = false;
