@@ -1,28 +1,56 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class OMFGDogsScript : MonoBehaviour {
 
-	//FrandCounter fc;
-	//bool for all frands found == true if frands counter >= 4
-	AudioSource source;
+	//!!!!!!!THIS IS ON THE CORGI!!!!!!!!!
+
+	//stuff to grab
+	FrandCounter fc;
+	AudioSource dogSong;
+	MusicManager mm;
+	public Canvas canvas;
+	GameObject audioManager;
+
+	//public things
 	public AudioClip omfgdogs;
+	public bool allFriendsFound = false;
+	public bool hasPlayed = false;
 
 	// Use this for initialization
 	void Start () {
 
-		source = GetComponent<AudioSource> ();
+		//AUDIO SOURCE ON CORGI
+		dogSong = this.GetComponent<AudioSource> ();
 
-		//get the frand counter
+		//FrandCounter object
+		canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
+		fc = canvas.GetComponentInChildren<FrandCounter> ();
+
+		//Music Manager script
+		audioManager = GameObject.Find("Music Man");
+		mm = audioManager.GetComponent<MusicManager>();
 	
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 
-//		if (allFrandsFound == true) {
+		if (fc.numOfFrands >= 4) {
+			//change the bool just to be nice
+			allFriendsFound = true;
+
 			//stop playing main theme
-//			source.PlayOneShot (omfgdogs);
-//		}
+			if (mm.source.isPlaying){
+				mm.source.Stop ();
+			}
+
+			//start playing OMFG DOGS
+			if (hasPlayed == false) {
+				dogSong.PlayOneShot (omfgdogs);
+				hasPlayed = true;
+			}
+		}
 	}
 }
