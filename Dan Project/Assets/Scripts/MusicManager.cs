@@ -8,7 +8,7 @@ public class MusicManager : MonoBehaviour {
 
 	public AudioClip mainTheme;
 	public AudioClip menuTheme;
-	private AudioSource source;
+	public AudioSource source;
 
 	void Start () {
 		AudioManager.instance.PlayMusic(menuTheme,2);

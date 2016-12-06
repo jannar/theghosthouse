@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class DoorActivate : MonoBehaviour {
@@ -6,6 +7,11 @@ public class DoorActivate : MonoBehaviour {
 	//GameObject corgi;
 	//Collider bc;
 	//whatever the script for the corgi prefab is
+
+	//scripts and objects
+	public Canvas canvas;
+	FrandCounter fc;
+
 
 	// Use this for initialization
 	void Start () {
