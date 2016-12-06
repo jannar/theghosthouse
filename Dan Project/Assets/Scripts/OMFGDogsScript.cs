@@ -31,9 +31,9 @@ public class OMFGDogsScript : MonoBehaviour {
 		//Music Manager script
 		audioManager = GameObject.Find("Music Man");
 		mm = audioManager.GetComponent<MusicManager>();
-	
+
 	}
-	
+
 	// Update is called once per frame
 	void FixedUpdate () {
 

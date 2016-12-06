@@ -4,28 +4,30 @@ using System.Collections;
 
 public class DoorActivate : MonoBehaviour {
 
-	//GameObject corgi;
-	//Collider bc;
-	//whatever the script for the corgi prefab is
-
 	//scripts and objects
 	public Canvas canvas;
 	FrandCounter fc;
-
+	Collider bc;
+	//audio source stuff if time
 
 	// Use this for initialization
 	void Start () {
 
-		//corgi = GameObject.Find("Player1");
-		//bc = GetComponent<BoxCollider>();
-		//get the corgi prefab script for getting friends
+		//get collider
+		bc = GetComponent<BoxCollider> ();
+
+		//FrandCounter object
+		canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
+		fc = canvas.GetComponentInChildren<FrandCounter> ();
 	
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 
-		//if (corgi.script.thing).friends >= 4(bc.SetActive(True);}
+		if (fc.numOfFrands >= 4) {
+			Destroy (this.bc);
+		}
 	
 	}
 }
