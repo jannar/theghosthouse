@@ -10,10 +10,8 @@ public class GhostEvac : MonoBehaviour {
 
 	//objects and scripts
 	GameObject corgi;
-	GameObject FrandFinder;
 	GhostStabalizer gs; 
 	EliminateGhosts eg;
-	//CollectingFrands cf;
 
 	//public stuff
 	public bool inLineSight = false;
@@ -22,10 +20,10 @@ public class GhostEvac : MonoBehaviour {
 	public TextMesh spoopStatements;
 
 	public float originalSpeed;
-	public float minX;
-	public float minZ;
-	public float maxX;
-	public float maxZ;
+	public float minX = -120f;
+	public float minZ = -120f;
+	public float maxX = 120f;
+	public float maxZ = 120f;
 
 	public List<string> SpoopedWords;
 
@@ -35,8 +33,10 @@ public class GhostEvac : MonoBehaviour {
 	//private stuff
 	private NavMeshAgent agent;
 	private int currentSpoopWord;
-	private float randoNumberX;
-	private float randoNumberz;
+	public static float randoNumberX;
+	public static float randoNumberz;
+	float colliderRadius;
+	float corgiColliderRadius;
 
 	// Use this for initialization
 	void Start () {
@@ -49,12 +49,12 @@ public class GhostEvac : MonoBehaviour {
 		agent = GetComponent<NavMeshAgent>();
 		gs = GetComponent<GhostStabalizer>();
 		eg = corgi.GetComponentInChildren<EliminateGhosts> ();
-		//cf = corgi.GetComponent<CollectingFrands> ();
-		//corgiColliderRadius = corgi.GetComponent<CapsuleCollider>().radius; 
-		//colliderRadius = corgi.GetComponentInChild<CapsuleCollider>().radius; 
 
 		//get the original speed
 		originalSpeed = Random.Range(gs.minSpeed, gs.maxSpeed);
+
+		corgiColliderRadius = corgi.GetComponent<CapsuleCollider>().radius; 
+		colliderRadius = GetComponent<CapsuleCollider>().radius; 
 
 //		//settin' up the things they say
 //		int i = 0;
@@ -159,9 +159,33 @@ public class GhostEvac : MonoBehaviour {
 		this.transform.position = newLocation;
 		agent.speed = originalSpeed;
 
+		if (this.transform.position.x > 120) {
+			float newX = this.transform.position.x;
+			float newXHalved = newX * .5f;
+			Vector3 newNewLocationX = new Vector3 (newXHalved, this.transform.position.y, this.transform.position.z);
+		}
+
+		if (this.transform.position.x < -120) {
+			float newLittleX = this.transform.position.x;
+			float newLittleXHalved = newLittleX * -.5f;
+			Vector3 newNewLocationLittleX = new Vector3 (newLittleXHalved, this.transform.position.y, this.transform.position.z);
+		}
+
+		if (this.transform.position.z > 120) {
+			float newZ = this.transform.position.z;
+			float newZHalved = newZ * .5f;
+			Vector3 newNewLocationZ = new Vector3 (this.transform.position.x, this.transform.position.y, newZHalved);
+		}
+
+			if (this.transform.position.z < -120) {
+			float newLittleZ = this.transform.position.z;
+			float newLittleZHalved = newLittleZ * -.5f;
+			Vector3 newNewLocationZ = new Vector3 (this.transform.position.x, this.transform.position.y, newLittleZHalved);
+		}
+
 		//reset destination
-//		Vector3 directionToTarget = (corgi.transform.position -transform.position).normalized;  //normalized direction to target
-//		Vector3 targetPosition = corgi.transform.position - directionToTarget * (cf.colliderRadius + corgiColliderRadius);//new Vector3(target.position.x, 0, target.position.z); //the target's position
-//		agent.SetDestination(targetPosition); //set the destination for the nav mesh agent
+		Vector3 directionToTarget = (corgi.transform.position -transform.position).normalized;  //normalized direction to target
+		Vector3 targetPosition = corgi.transform.position - directionToTarget * (colliderRadius + corgiColliderRadius);//new Vector3(target.position.x, 0, target.position.z); //the target's position
+		agent.SetDestination(targetPosition); //set the destination for the nav mesh agent
 	}
 }
